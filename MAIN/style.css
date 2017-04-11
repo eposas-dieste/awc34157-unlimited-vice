@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+#campaigns{
+    margin-top: 20px;
+    margin-left: 30px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    color: white;
+}
+#logo > img{
+    margin-top: 30px;
+    margin-left: 26px;
+    margin-bottom: 30px;
+    width: 200px;
+}
+#logo{
+    width: 250px;
+    position: absolute;
+    border-right: 1px solid #EBEBEB;
+    left: 0;
+    top: 0;
+}
+#column{
+    background-color: black;
+    border-right: 1px solid #EBEBEB;
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 149px;
+}
+#inner{
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 100px;
+}
+.link{
+    padding-top: 4px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: white;
+}
+.title{
+    padding-top: 4px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 17px;
+    color: white;
+}
+.section{
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: white;
+}
+#iframe-container{
+    display: block;
+    position: absolute;
+    left: 300px;
+    top: 138px;
+}
+#iframe-title{
+    padding-left:0px;
+    font-size:11px;
+    font-family:'Arial';
+    width: 100px;
+}
+button{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+}
