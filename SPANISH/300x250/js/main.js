@@ -27,7 +27,7 @@ B.animate=function(){
   A.visible(['back','overlay','flareleft','flaretop']);
   B.addScrollableLegal(false);
   // global 'delay'
-  var d=3,f=1;
+  var d=3,f=2;
   // append cta btn div
   var b=document.createElement('img');
   b.id='btn';
@@ -62,19 +62,15 @@ B.animate=function(){
   function flares(dur){
     TweenLite.killTweensOf('#flareleft');
     TweenLite.killTweensOf('#flaretop');
-    A.set('flareleft', {alpha:1,x:0,y:0});
-    A.set('flaretop', {alpha:1,x:0,y:0});
     // left flare
-    A.from('flareleft', dur, {alpha:0,y:50,ease:Power1.easeIn,onComplete:function(){
-      A.to('flareleft', dur, {alpha:0.5,y:-75,scaleY:1.5,ease:Power1.easeOut,onComplete:function(){
-        TweenLite.to('#flareleft', dur/2, {alpha:0});
-      }});
-    }});
+    TweenLite.set('#flareleft', {alpha:0.8,y:110,scaleY:1.75});
+    //TweenLite.to('#flareleft',0.1,{alpha:0.7,onComplete:function(){
+      TweenLite.to('#flareleft', dur, {alpha:0.4,y:-50,ease:Power2.easeInOut,onComplete:TweenLite.to,onCompleteParams:['#flaretop',1,{alpha:0}]});
+    //}});
     // top flare
-    A.from('flaretop', dur, {alpha:0,x:-50,ease:Power1.easeIn,onComplete:function(){
-      A.to('flaretop', dur, {alpha:0.5,x:100,scaleX:1.5,ease:Power1.easeOut,onComplete:function(){
-        TweenLite.to('#flaretop', dur/2, {alpha:0});
-      }});
-    }});
+    TweenLite.set('#flaretop', {alpha:0.8,x:-50,scaleX:1.75});
+    //TweenLite.to('#flaretop',0.1,{alpha:0.7,onComplete:function(){
+    TweenLite.to('#flaretop', dur, {alpha:0.4,x:150,ease:Power2.easeInOut,onComplete:TweenLite.to,onCompleteParams:['#flaretop',1,{alpha:0}]});
+    //}});
   }
 }
