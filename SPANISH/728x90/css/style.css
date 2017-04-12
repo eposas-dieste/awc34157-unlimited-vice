@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+
+#container{
+    cursor: pointer;
+}
+
+#reload{
+    cursor: pointer;
+    top: -5px;
+    left: 0px;
+}
+
+[src='img/btn.png']{
+  top: 18px;
+  left: 586px;
+  width: 80px;
+  position: absolute;
+  cursor: pointer;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden; 
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
